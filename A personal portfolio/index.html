@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+     <!--ADD STYLESHEETS-->
+    <link rel="stylesheet" href="style.css"/> 
+    <link rel="stylesheet" href="mediaqueries.css"/>
+</head>
+<body>
+<!--Creating navigation menu-->
+<nav id="desktop-nav">
+    <div class="logo"> Stephen Lyne</div>
+    <div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>                                                                                                  
+        </ul>
+
+    </div>
+</nav>
+<!--Adding hamburger menu -->
+<nav id="hamburger-nav">
+  <div class="logo"> Stephen Lyne</div>
+       <div class="hamburger-menu">
+          <div class="hamburger-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="menu-links">
+        <ul>
+            <li><a href="#about" onclick="toggleMenu()">About</a></li>
+            <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+            <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </ul>
+          </div>
+ </div>
+</nav>
+<!--Creating the Profile Section -->
+<section id="profile">
+    <div class="section_pic-container">
+ <!--Add a Profile Picture -->
+        <img src="./assets/DSC_0028.jpg" alt="Stephen Lyne profile picture"/>
+    </div>
+
+    <!--Create a Text Section including name and skills -->
+<div class="section_text">
+    <p class="section_text_p1">Hello, I'm</p>
+    <h1 class="title"> Stephen Lyne</h1>
+    <p class="section_text__p2">Front End Web Designer</p>
+
+    <!--Creating Buttons  -->
+
+    <div class="btn container">
+<!--Adding button link to resume -->
+        <button 
+        class="btn btn-color-2" 
+onclick="window.open('./assets/resume-example.pdf')" 
+        >
+        Download CV
+    </button>
+    <!--Adding button link to Contact Info -->
+    <button
+    class="btn btn-color-1"
+onclick="location.href='#contact'">
+Contact Info
+</button>
+</div>
+<!--Adding img link to LinkedIn profile -->
+<div id="socials-container">
+<img src="./assets/linkedin.png" 
+alt="My Linkedinn profile" 
+class="icon" 
+onclick="location.href='https://linkedin.com/'">
+<!--Adding img link to GitHub -->
+<img
+src="./assets/github.png" 
+alt="My Github profile" 
+class="icon" 
+onclick="location.href='https://github.com/'">
+</div>
+</div>
+</section>
+<!--Creating about section -->
+<section id="about">
+    <!--Adding text title -->
+    <p class="section_text_p1">Get to know More</p>
+    <h1 class="title">About Me</h1>
+    <div class="about-details-container">
+        <div class="about-container">
+            <div class="details-container">
+                <!--Adding img -->
+                <img src="./assets/experience.png" 
+                alt="experience icon" 
+                class="icon"
+                >
+                <!--Adding text about experience as a developer -->
+                <h3>Experience</h3>
+                <p>1+ Years Frontend Development</p>
+            </div>
+            <div class="details-container">
+                <!--Adding img -->
+                <img 
+                src="./assets/education.png" 
+                alt="education icon" 
+                class="icon">
+                <!--Adding text showing education in computing -->
+                <h3>Education</h3>
+                <p>Science of Computing BA<br/>BA in Web Development<br/></p>
+            </div>
+        </div>
+        <!--Adding text about the developer  -->
+        <div class="text-container">
+        <p>I am a front end web developer. Having always had an interest in computers and IT, I began my computing career by completing a level 8 degree in The Science of Computing, in Griffith College. This involved front end , back end and database programming. I recieved a 2.1 grade in this course. Since then, I have been working hard on improving my coding. I decided o specialise in web design. I chose to do another degree, this time in University College Dublin. The degree was a Diploma in Front End Web Development. Having finished this course I am now looking for work in this field. I am a highly motivated person who will work hard at any opportunities that become available to me. </p>
+    </div>
+    <!--Adding an arrow icon to scroll up and down the page -->
+</section>
+<!--Adding experience section-->
+<section id="experience">
+    <p class="section_text_p1">Explore My</p>
+    <h1 class="title">Experience</h1>
+    <div class="experience-details-container">
+        <div class="about-containers">
+            <div class="details-container">
+                <!--Adding years icon as the number of years working as a developer is being shown -->
+                <img src="./assets/gugu.jpg" alt="years icon"  aria-label="Years of experience" class="icon">
+                <h3>Years of Experience</h3>
+                <p>1+ Years</p>
+            </div>
+            <!--Adding a sub title -->
+            <h2 class="experience subtitle">Frontend Development</h2>
+            <div class="article-container">
+                <!--Here we show what areas the developer has experience in -->
+                <!--This is done by adding a checkmark icon along with naming the area of experience eg. html -->
+                <!--This is repeated for each area -->
+                <article>
+                    <img 
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class = "icon"
+                    >
+                    <div>
+                        <h3>HTML</h3>
+                        <p>Experienced</p>
+                    </div>
+
+                </article>
+                <article>
+                    <img 
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class = "icon"
+                    >
+                    <div>
+                        <h3>CSS</h3>
+                        <p>Experienced</p>
+                    </div>
+
+                </article>
+                <article>
+                    <img 
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class = "icon"
+                    >
+                    <div>
+                        <h3>JavaScript</h3>
+                        <p>Experienced</p>
+                    </div>
+
+                </article>
+                <article>
+                    <img 
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class = "icon"
+                    >
+                    <div>
+                        <h3>Material UI</h3>
+                        <p>SASS</p> 
+                    </div>
+
+                </article>
+                <article>
+                    <img 
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class = "icon"
+                    >
+                    <div>
+                        <h3>SQL</h3>
+                        <p>Basic</p>
+                    </div>
+
+                </article>                
+                <article>
+                    <img 
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class = "icon"
+                    >
+                    <div>
+                        <h3>GIT</h3>
+                        <p>Intermediate</p>
+                    </div>
+
+                </article>
+
+
+            </div>
+        </div>
+    </div>
+</section>
+<!--Adding project section -->
+<section id="projects">
+    <!--Show which past projects the developer has completed -->
+    <p class="section_text_p1">Browse My Recent</p>
+    <h1 class="title">Projects</h1>
+    <div class="experience-details-container">
+        <div class="about-containers">
+         <div class="details-container color-container">
+            <!--Adding img of project 1 -->
+            <div class="article-container">
+                <img 
+                src="./assets/project-1.png"
+                alt="Project 1"
+                aria-label="project 1"
+                class="project-img"
+                >
+            </div>
+            <!--Adding a button that links to project one -->
+            <h2 class="experience sub title project-title">Project One</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'" >
+                Github
+              </button>
+            </div>
+         </div>
+        <div class="details-container color-container">
+            <!--Adding img of project 2 -->
+            <div class="article-container">
+                <img 
+                src="./assets/project-2.png"
+                aria-label="project 2"
+                alt="Project 2"
+                class="project-img"
+                >
+            </div>
+                 <!--Adding a button that links to project two -->
+            <h2 class="experience sub title project-title">Project Two</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'" >
+                Github
+              </button>
+              </div>
+            </div>
+        </div>
+             <!--Adding img of project 3 -->
+        <div class="details-container color-container">
+            <div class="article-container">
+                <img 
+                src="./assets/project-3.png"
+                alt="Project 3"
+                aria-label="project 3"
+                class="project-img"
+                >
+            </div>
+                <!--Adding a button that links to project 3 -->
+            <h2 class="experience sub title project-title">Project Three</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'" >
+                Github
+            </button>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</section>
+<!--Creating Contact Section -->
+<section id="contact">
+    <p class="section_text_p1">Get In Touch</p>
+    <h1 class="title">Contact Me</h1>
+        <!--Adding email icon -->
+    <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+            <img
+            src="./assets/email.png"
+            alt="email icon"
+            aria-label="email"
+            class="icon contact icon"
+            >
+                <!--Adding email address -->
+            <p> <a href="mailto:examplemail@gmail.com">slyne234@gmail.com</a>
+            </p>
+        </div>
+            <!--Adding LinkedIn icon -->
+        <div class="contact-info-container"></div>
+            <img
+            src="./assets/linkedin.png"
+            alt="linkedIn icon"
+            aria-label="LinkedIn"
+            class="icon contact icon"
+            >
+            <!--Adding LinkedIn profile link -->
+            <p> <a href="https://www.linkedin.com/in/stephen-lyne-a07414193/">LinkedIn</a>
+            </p>
+        </div>
+
+    </div>
+</section>
+<!--Adding footer section -->
+<footer>
+  <!--Adding navigation menu links -->
+    <nav>
+        <div class="nav-links-container">
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contacts</a></li>                                                                                                  
+            </ul> 
+        </div>
+    </nav>
+ <!--Adding copywright icon -->
+<p>Copyright &#169; 2024 Stephen Lyne. All Rights Reserved</p>
+</footer>
+<!--Adding Javascript File -->
+<script src="script.js"></script>
+</body>
+</html>

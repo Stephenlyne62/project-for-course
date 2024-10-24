@@ -1,0 +1,119 @@
+/* Media Query for screens smaller than 1200px (tablet and smaller desktops) */
+@media screen and (max-width: 1200px) {
+    /* Profile Section */
+    #profile {
+        height: 83vh;
+        margin-bottom: 6rem;
+    }
+    .about-containers {
+        flex-wrap: wrap;
+    }
+
+    /* Hamburger Menu Visibility */
+    #desktop-nav {
+        display: none;
+    }
+    #hamburger-nav {
+        display: flex;
+    }
+
+    /* Experience Section */
+    #experience,
+    .section-container {
+        display: block;
+    }
+
+    /* Arrow Element */
+    .arrow {
+        display: none;
+        height: fit-content;
+    }
+
+    /* Section Adjustments */
+    section {
+        margin: 0 5%; /* Use percentage to create flexible spacing */
+    }
+
+    /* Section Image Container */
+    .section_pic-container {
+        width: 275px; /* Set fixed width at this breakpoint */
+        height: 275px;
+        margin: 0 auto 2rem;
+    }
+
+    /* About Section Adjustments */
+    .about-containers {
+        margin-top: 0;
+    }
+}
+
+/* Media Query for screens smaller than 600px (mobile phones) */
+@media screen and (max-width: 600px) {
+    /* Contact and Footer Section */
+    #contact,
+    footer {
+        height: 50vh;
+    }
+
+    /* Profile Section */
+    #profile {
+        height: 83vh;
+        margin-bottom: 0; /* Fix typo from "margin-border" to "margin-bottom" */
+    }
+
+    /* Adjust Font Size in Articles */
+    article {
+        font-size: 1rem;
+    }
+
+    /* Footer Adjustments */
+    footer nav {
+        height: fit-content;
+        margin-bottom: 2rem;
+    }
+
+    /* Flexbox Wrapping for Small Screens */
+    .about-containers,
+    .contact-info-upper-container,
+    .btn-container {
+        flex-wrap: wrap;
+    }
+
+    /* Contact Info Font Adjustments */
+    .contact-info-container {
+        margin: 0;
+    }
+    .contact-info-container p,
+    .nav-links li a {
+        font-size: 1.2rem; /* Increase readability on small screens */
+    }
+
+    /* Logo Font Size */
+    .logo {
+        font-size: 1.9rem;
+    }
+
+    /* Navigation Links Adjustments */
+    nav.links {
+        flex-direction: column;
+        gap: 0.7rem;
+        text-align: center;
+    }
+
+    /* Section Image Size */
+    .section_pic-container {
+        width: auto; /* Allow images to scale fluidly */
+        height: 46vw; /* Relative to viewport width */
+        justify-content: center;
+    }
+
+    /* Text Size in Section */
+    .section__text__p2 {
+        font-size: 1.5rem; /* Reduce text size */
+    }
+
+    /* Text Justification */
+    .text-container {
+        text-align: justify;
+    }
+}

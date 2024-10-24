@@ -1,0 +1,509 @@
+/* StyleSheet */
+
+/*Import different Fonts */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+*{margin: 0;
+padding: 0;
+}
+
+/*Set Fonts */
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #74b0cf;
+}
+
+/*Create a smooth transition from link to section */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/*Setting Paragraph Colours */
+p{
+    color:rgb(41, 105, 105);
+}
+
+/*Setting a non-instantaneous transition between two styles */
+
+a, 
+.btn{
+    transition: all 3250ms ease;
+}
+
+/*Creating a flexible layout for responsive design for the nav links*/
+
+nav,.nav-links{
+    display: flex;
+}
+
+/* aranging nav links for website page*/
+
+nav{
+    justify-content:space-around ;
+    align-items: center;
+    height: 20vh;
+}
+
+/*Desigining nav links*/
+
+.nav-links {
+    gap: 2rem;
+    list-style: none;
+    font-size: 2rem;
+}
+
+/*Style Link Elements*/
+
+a{
+    color:#0b023f;
+    text-decoration: none;
+    text-decoration-color:white;
+}
+
+/*Style Links for when the cursor is hovering over the link*/
+
+a:hover{
+    color: rgb(255, 255, 255);
+    text-decoration:underline;
+    text-underline-offset: .5rem;
+    text-decoration-color: rgb(247, 249, 233);
+}
+
+.logo {
+    font-size: 2rem;
+    color:#0b023f;
+}
+
+.logo:hover {
+    cursor:default;
+}
+
+/*Hamburger menu*/
+
+/* Do not show hamburger in desktop view*/
+
+#hamburger-nav {
+    display: none;
+}
+
+.hamburger-menu {
+    position: relative;
+    display: inline-block;
+}
+
+/* add style to the hamburger icon*/
+
+.hamburger-icon {
+    width: 30px;
+    height: 24px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3 ease-in-out;
+}
+
+.hamburger-icon span {
+    width: 100%;
+    height: 2px;
+    background-color: rgb(0, 0, 0);
+    transition: all 0.3  ease-in-out;
+}
+
+/* Design menu links attributes such as positioning and colour */
+
+.menu-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #74b0cf;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.2 ease-in-out;
+}
+
+/* Adding style to the elements in each menu */
+
+.menu-links a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+    transition: all 0.3 ease-in-out;
+}
+
+/* Style Targetting the menu Lists */
+
+.menu-links li {
+    list-style: none;
+}
+/*Height for when menu is opened*/
+
+.menu-links.open {
+    max-height: 300px;
+}
+
+/* When Transforming the menu from a row, the menu can end up in a poorly placed position */
+/* Here we adjust the position of the menu to avoid this */
+/*  Opacity of the icon is adjusted. */
+/* The opacity is the degree to which content behind an element is hidden*/
+
+.hamburger-icon.open span:first-child {
+    transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-icon.open span:last-child {
+    transform: rotate(-45deg) translate(10px, -5px);
+}
+
+.hamburger-icon span:first-child {
+    transform:none;
+    opacity: 1;
+}
+
+/*Sections*/
+/*Styling is added for each of the Sections */
+/* This is done to control how each section will appear on screen */
+
+section {
+padding-top: .5vh;
+height: 120vh;
+margin: .5rem;
+box-sizing: border-box;
+min-height: fit-content;
+height: 96vh;
+box-sizing: border-box;
+min-height: fit-contact;
+}
+
+.section-container {
+    display:flex;
+}
+
+.section-container > * {
+    margin-bottom: 5vh;
+}
+
+/* Profile Section */
+/* Changing how elements will appear in the profile section */
+#profile {
+display: flex;
+justify-content: right;
+gap: 20rem ;
+height: 85vh ;
+}
+
+/* How pictures will show up in section containers */
+
+.section_pic-container {
+    display:flex;
+    height:3000px;
+    width: 300px;
+    margin: auto 0;
+}
+
+/* styling for text within sections */
+
+.section_text {
+    align-self: center;
+    text-align: center;
+    padding-left: 5%;
+}
+
+/* font weight styling for in-section text */
+
+.section_text p{
+    font-weight: 400;
+}
+
+/* styling for text alignment within sections */
+
+.section_text_p1{
+    text-align: center;
+}
+
+/* font-size and margin size styling */
+
+.section_text_p2 {
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+}
+
+/* title font size and text alignment stylings */
+
+.title {
+    font-size: 3rem;
+    text-align: center;
+}
+
+/* Styling for social media icons */
+
+#socials-container {
+    display: flex;
+    justify-content: center;
+    margin-top: .5rem;
+    gap: 1rem;
+}
+
+/* How the cursor should look while on icons, and icon height stylings */
+
+.icon {
+    cursor: pointer;
+    height: 2rem;
+}
+
+/* Where Buttons should be aligned on screen */
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* Styling for buttons */
+/*Font weight is styled, smooth transitions between different navs when using nav menu*/
+/*padding, width and border stylings */
+
+.btn {
+    font-weight: 600;
+    transition: all 300ms ease;
+    padding: 1rem ;
+    width:8rem;
+    border-radius: 2rem;
+}
+
+/*Button colours*/
+
+.btn-color-1, .btn-color-2 {
+    border:0.5rem solid #74b0cf;
+}
+
+/* Colours when hovering over a button */
+
+.btn-color-1:hover, 
+.btn-color-2:hover {
+    background: rgb(rgb(191, 191, 191)) ;
+    color: white;
+}
+
+/* Button Colours for when the nav is in mobile view */
+
+.btn-color-1:hover{
+    background: rgb(255, 255, 255);
+}
+
+.btn-color-2{
+    background: rgb(255, 255, 255);
+}
+
+.btn-color-2:hover{
+border:0.1rem solid #a7fff6;
+}
+
+/* Set Gap between buttons */
+
+.btn-container{
+    gap:1rem;
+}
+
+/* About Section */
+/* Positioning the about container */
+
+.about {
+    position:relative;
+    }
+
+    .about-container {
+gap: 2rem;
+margin-bottom: 0.2rem;
+margin-top: 0.2rem;
+    }
+
+    .about-details-container {
+justify-content: flex-start;
+flex-direction: column;
+    }
+
+    .about-container,
+    .about-details-container {
+        display: flex;
+    }
+
+    /*about pic border size*/
+
+    .about-pic {
+        border-radius: 1rem;
+    }
+
+    /*positioning of arrow icon on screen*/
+
+    /*Stylings for the details container*/
+
+.details-container {
+    padding: 1.5rem;
+    flex: 1;
+    background: white;
+    border-radius: 2rem;
+    border-color: green;
+    border-style: solid;
+}
+
+.menu-links open {
+    max-height: 300px;
+}
+
+/* Styling for the container that contains img */
+
+.section_pic-container {
+    height: 500px; /* Adjust the height as per your needs */
+    width: 400px;  /* Adjust the width accordingly */
+    margin: auto 0;
+}
+
+/*Experience Section */
+/*Positioning experience sections information */
+
+#experience {
+    position:relative;
+}
+
+/* Sub title stylings */
+
+.experience-subtitle
+ {color: rgb(150, 89, 89);
+    font-weight:500;
+    font-size: 1.75rem;
+    margin-bottom: .2rem;
+}
+
+/* Styling for the container that contains experience information */
+
+.experience-details-container {
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Styling the containers that host a checkmark img icon */
+/* These containers also hold info on each area of expertise of the developer */
+
+.article-container {
+    display:flex;
+    text-align: initial;
+    flex-wrap:wrap;
+    flex-direction: row;
+    gap: .5rem;
+    justify-content: space-around;
+}
+
+/* How the cursor will behave when above the icon */
+
+article.icon {
+    cursor:default;
+}
+
+/*Projects Section*/
+/* Positioning of the projects */
+
+#projects {
+    position: relative;
+}
+
+/* Colour of the containers holding each project */
+
+.color-container {
+    border-color: rgb(163, 163, 163);
+    background: rgb(201, 253, 255);
+}
+
+/* Setting a border for the img */
+
+.project-img {
+    border-radius: 2rem;
+    width: 5%;
+    height: 5%;
+}
+
+/* Styling the project titles */
+/* Changing the colour and the margins*/
+
+.project-title{
+    margin:.3rem;
+    color:  rgb(0, 202, 247);
+}
+
+.project-btn {
+    color: rgb(255, 207, 248);
+}
+
+/*Contact Section*/
+/*Adjusting the alignment of the contact section */
+
+#contact {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 70vh;
+}
+
+/* Changing the stylings of the information container */
+/* Involves alignment changes along with colour and border changes */
+
+.contact-info-upper-container {
+    display: flex;
+    justify-content: center;
+    border-radius:2rem;
+    border:rgb(85, 85, 85);
+    border-color: rgb(255, 197, 162);
+    background: rgb(228, 255, 255);
+    margin: 1rem auto;
+    padding: 0.5rem;
+}
+
+/* Adjusting Font size for info container */
+
+.contact-info-container {
+    font-size: larger;
+}
+
+/* Adjusting cursor behaviour when hovering on an icon */
+
+.contact-icon {
+    cursor: default;
+}
+
+/* Adjusting Height of the email icon */
+
+.email-icon {
+    height: 2.5rem
+}
+
+/* Footer Section */
+/*Adjusting the height and margin of the footer section*/
+
+footer {
+    height:26vh;
+    margin:0 1rem;
+}
+
+/*Setting the text of the footer to be central */
+
+footer p {
+    text-align: center;
+}
+
+/* Increase space below profile section */
+#profile {
+    margin-bottom: 50px; /* Adjust this value as needed */
+}
+
